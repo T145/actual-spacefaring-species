@@ -1,0 +1,154 @@
+portraits = {
+
+	Ametist = {
+		entity = "portrait_ametist_1_entity"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "lithoid_portrait_3_geode"
+		character_textures = {
+			"gfx/models/portraits/ametist/Ametist1.dds"
+			"gfx/models/portraits/ametist/Ametist2.dds"
+			"gfx/models/portraits/ametist/Ametist3.dds"
+		}
+	}
+
+	Ametistf = {
+		entity = "portrait_ametist_1_entity"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "lithoid_portrait_3_geode"
+		character_textures = {
+			"gfx/models/portraits/ametist/Ametistf1.dds"
+			"gfx/models/portraits/ametist/Ametistf2.dds"
+			"gfx/models/portraits/ametist/Ametistf3.dds"
+			"gfx/models/portraits/ametist/Ametistf4.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	AmetistL = {
+		default = Ametist
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					Ametist
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					Ametistf
+				}
+			}
+
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					Ametist
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					Ametistf
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					Ametist
+				}
+			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					Ametistf
+				}
+			}
+		}
+
+		leader = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					Ametist
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					Ametistf
+				}
+			}
+		}
+
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					Ametist
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					Ametistf
+				}
+			}
+		}
+	}
+}

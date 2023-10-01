@@ -1,0 +1,40 @@
+ART = {
+	ant = {
+		name = SPEC_Ant
+		plural = SPEC_Ant_pl
+		home_planet = SPEC_Ant_planet
+		home_system = SPEC_Ant_system
+		name_list = "HIVE"
+	}
+	bee = {
+		name = SPEC_Bee
+		plural = SPEC_Bee_pl
+		home_planet = SPEC_Bee_planet
+		home_system = SPEC_Bee_system
+		name_list = "HIVE"
+	}
+	mantis = {
+		name = SPEC_Mantis
+		plural = SPEC_Mantis_pl
+		home_planet = SPEC_Mantis_planet
+		home_system = SPEC_Mantis_system
+		name_list = "HIVE"
+	}
+	cockroach = {
+		name = SPEC_Cockroach
+		plural = SPEC_Cockroach_pl
+		home_planet = SPEC_Cockroach_planet
+		home_system = SPEC_Cockroach_system
+		name_list = "HIVE"
+	}
+}
+
+LITHOID = {
+	ametist = {
+		name = SPEC_Ametist
+		plural = SPEC_Ametist_pl
+		home_planet = SPEC_Ametist_planet
+		home_system = SPEC_Ametist_system
+		name_list =  "LITHOID3"
+	}
+}

@@ -1,0 +1,63 @@
+# The Portraits defined here are generally not available to the character creator, but will instead appear in AI empires across the galaxy.
+# 'graphical_culture' is connected to the looks used for ships and cities; see "common/graphical_culture/".
+# These may be overwitten in an "extendable" manner, meaning (for example) you can create a second "HUM" with extra portraits in it.
+
+# playable = yes/no/trigger (default: yes)		if this species class can is playable
+# randomized = yes/no/trigger (default: yes)	if this species class is randomized
+# custom_portraits = {}
+#	randomized = yes/no/trigger (default: yes)	to specify if portraits are randomized
+#	playable = yes/no/trigger (default: yes)	to specify if portraits are playable
+#	portraits = list portrait keys
+# species_trait_points							base number of species trait points available for this species class
+# species_max_traits							maximum number of traits that species of this class can have (doesn't count those with cost == 0)
+# possible										ethics/government requirements; see common/governments/readme_requirements.txt
+# gender = yes/no (default: yes)				whether the species has a gender
+# portrait_modding yes/no (default: yes)		whether the portrait can be modified with e.g. genemodding or robomodding
+
+# Interesting cultures:
+# solarpunk_01
+# extra_dimensional_01
+
+LITHOID = {
+	archetype = LITHOID
+
+	playable = { has_lithoids = yes }
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+
+	randomized = { has_lithoids = yes }
+
+	custom_portraits = {
+		randomized = { has_lithoids = yes }
+		playable = { has_lithoids = yes }
+		portraits = {
+			"AmetistL"
+		}
+	}
+
+	graphical_culture = lithoid_01
+	move_pop_sound_effect = "reptilian_pops_move"
+
+	resources = {}
+
+	trait = "trait_lithoid"
+}
+
+ART = {
+	archetype = BIOLOGICAL
+
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+
+	custom_portraits = {
+		portraits = {
+			"ant"
+			"bee"
+			"mantis"
+			"cockroach"
+		}
+	}
+
+	graphical_culture = arthropoid_01
+	move_pop_sound_effect = "arthopoid_pops_move"
+
+	resources = {}
+}

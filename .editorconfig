@@ -7,9 +7,16 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
+[*.txt]
+charset = utf-8-bom
+indent_style = tab
+indent_size = 1
+
 # Required for localisation files
 [*.yml,*.yaml]
 charset = utf-8-bom
+indent_style = space
+indent_size = 1
 
 [*.bash,*.pl,*.awk,*.py]
 indent_style = space

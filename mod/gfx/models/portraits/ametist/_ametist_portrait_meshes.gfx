@@ -1,0 +1,12 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "portrait_ametist_1_mesh"
+		file = "gfx/models/portraits/ametist/Ametist_1_portrait.mesh"
+		animation = { id = "idle"	type = "Ametist_1_happy_animation" }
+		animation = { id = "idle2"	type = "Ametist_1_happy_2_animation" }
+		animation = { id = "idle3"	type = "Ametist_1_happy_3_animation" }
+		scale = 1.0
+	}
+
+}
